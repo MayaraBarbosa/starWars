@@ -1,0 +1,81 @@
+@font-face {
+  font-family: MyFont;
+  src: url("fonts/font_starwars.ttf")  format('truetype')
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  color: yellow;
+  text-align: center;
+}
+
+
+body{
+  background: url("imagens/background.jpg");
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black;
+  background-size: cover;
+  height:100%;
+
+  font-family: MyFont;
+
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  padding: 0;
+  margin-bottom: auto;
+  list-style: none;
+  overflow-x: hidden;
+
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  width: 30em;
+}
+
+.card-title{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    margin-right: auto;
+  }
+}
